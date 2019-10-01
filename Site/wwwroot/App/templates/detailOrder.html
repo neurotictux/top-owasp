@@ -1,0 +1,29 @@
+<div layout="column">
+
+  <div style="padding:20px">
+    <label>Situação: {{order.situacao}}</label>
+  </div>
+
+  <div style="padding:20px">
+    <label>Total: R$ {{total}}</label>
+  </div>
+
+  <div ng-show="order.dataAceite != null" style="padding:20px">
+    <label>Aprovado em {{order.dataAprovacao }}</label>
+  </div>
+
+  <div ng-show="order.dataExpedicao != null" style="padding:20px">
+    <label>Finalizado em {{order.dataFinalizacao}}</label>
+  </div>
+
+  <div style="padding-left:20px">
+    Produtos:
+
+    <md-list>
+      <md-list-item ng-repeat="p in products" class="noright" style="border-top: 1px solid #ccc">
+        <span style="width: 50%">{{ p.id + ' - ' + p.nome + ' - R$ ' + p.precoMoney }}</span>
+        <span style="width: 30%">Quantidade: {{p.count}}</span>
+      </md-list-item>
+    </md-list>
+  </div>
+</div>

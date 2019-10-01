@@ -1,0 +1,48 @@
+<md-dialog layout="column">
+    
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>{{product.id ? 'Edição' : 'Novo'}}</h2>
+        </div>
+      </md-toolbar>
+    
+      <md-dialog-content style="padding:20px">
+    
+        <div layout="row">
+          <md-input-container class="input-container-1">
+            <label>Nome</label>
+            <input type="text" ng-model="product.nome">
+          </md-input-container>
+    
+          <md-input-container class="input-container-1">
+            <label>Preço</label>
+            <input type="number" ng-model="product.preco">
+          </md-input-container>
+        </div>
+    
+        <md-input-container class="input-container-1">
+          <label>Categoria</label>
+          <md-select ng-model="product.categoria.id">
+            <md-option  ng-repeat="c in categories" ng-value="c.id">{{c.nome}}</md-option>
+          </md-select>
+        </md-input-container>
+    
+      </md-dialog-content>
+    
+      <md-dialog-actions>
+    
+        <div layout="column">
+          <md-list ng-repeat="m in errors">
+            <span class="error-message">* {{m}}</span>
+          </md-list>
+        </div>
+    
+        <md-button ng-click="close()" class="md-raised">
+          Cancelar
+        </md-button>
+        <md-button ng-click="save(user)" class="md-primary md-raised">
+          Salvar
+        </md-button>
+      </md-dialog-actions>
+    
+    </md-dialog>

@@ -1,0 +1,10 @@
+<div>
+  <md-list>
+    <md-list-item ng-repeat="p in users" class="noright">
+      {{ p.id + ' - ' + p.login + ' - ' + p.email}}
+      <md-button class="md-hue-1 md-primary" ng-click="openModal(p)">Editar</md-button>
+      <md-button class="md-hue-2 md-warn" ng-click="remove(p)">Remover</md-button>
+    </md-list-item>
+  </md-list>
+  <md-button class="md-primary md-raised" ng-click="openModal()">Novo</md-button>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <md-list>
+    <md-list-item ng-repeat="p in orders" class="noright">
+      {{ p.id + ' - ' + p.situacao + ' - ' + p.totalItens}}
+      {{ p.totalItens > 1 ? ' itens' : ' item' }}
+      {{ ' - Total: R$ ' + p.totalPreco }}
+      <md-button class="md-hue-1 md-primary" ng-click="openDetail(p)">Detalhes</md-button>
+      <md-button class="md-raised md-hue-1 md-primary" ng-click="changeStatus(p.id)" ng-show="isAdmin && p.situacao == 'Em Andamento'" ng-click="">Aprovar</md-button>
+      <md-button class="md-raised md-hue-1 md-primary" ng-click="changeStatus(p.id)" ng-show="isAdmin && p.situacao == 'Aprovado'" ng-click="">Finalizar</md-button>
+    </md-list-item>
+  </md-list>
+  <span style="padding: 20px" ng-show="!orders.length || orders.length == 0">Nenhum registro encontrado.</span>
+</div>

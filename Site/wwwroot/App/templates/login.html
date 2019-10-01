@@ -1,0 +1,16 @@
+<div style="margin-left:20px" ng-keypress="onKeyDown($event)">
+    <md-input-container>
+        <label>Name</label>
+        <input type="text" ng-model="name">
+    </md-input-container>
+    <br />
+    <md-input-container>
+        <label>Password</label>
+        <input type="password" ng-model="password">
+    </md-input-container>
+    
+    <div>
+        <md-button class="md-primary md-raised" type="button" ng-click="login()">Login</md-button>
+        <span class="error-message">{{error}}</span>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<md-dialog layout="column">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{user.id ? 'Edição' : 'Novo'}}</h2>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content style="padding:20px">
+
+    <div layout="row">
+      <md-input-container class="input-container-1">
+        <label>Login</label>
+        <input type="text" ng-model="user.login">
+      </md-input-container>
+
+      <md-input-container class="input-container-1">
+        <label>Email</label>
+        <input ng-model="user.email">
+      </md-input-container>
+    </div>
+
+    <md-input-container class="input-container-1">
+      <label>Tipo</label>
+      <md-select ng-model="user.tipo">
+        <md-option value="admin">Admin</md-option>
+        <md-option value="user">User</md-option>
+      </md-select>
+    </md-input-container>
+
+    <div layout="row" ng-hide="user.id > 0">
+      <md-input-container class="input-container-1">
+        <label>Senha</label>
+        <input type="password" ng-model="user.password">
+      </md-input-container>
+
+      <md-input-container class="input-container-1">
+        <label>Confirma</label>
+        <input type="password" ng-model="user.confirm">
+      </md-input-container>
+    </div>
+
+  </md-dialog-content>
+
+  <md-dialog-actions>
+
+    <div layout="column">
+      <md-list ng-repeat="m in errors">
+        <span class="error-message">* {{m}}</span>
+      </md-list>
+    </div>
+
+    <md-button ng-click="close()" class="md-raised">
+      Cancelar
+    </md-button>
+    <md-button ng-click="save(user)" class="md-primary md-raised">
+      Salvar
+    </md-button>
+  </md-dialog-actions>
+
+</md-dialog>
