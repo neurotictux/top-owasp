@@ -1,0 +1,78 @@
+{
+  "Users": [
+    {
+      "Email": "admin@mail.com",
+      "Login": "admin",
+      "Password": "123qwe",
+      "Type": 1
+    },
+    {
+      "Email": "salesman@mail.com",
+      "Login": "salesman",
+      "Password": "123qwe",
+      "Type": 2
+    },
+    {
+      "Email": "client@mail.com",
+      "Login": "client",
+      "Password": "123qwe",
+      "Type": 3
+    }
+  ],
+  "Categories": [
+    {
+      "Description": "Notebook"
+    },
+    {
+      "Description": "Keyboard"
+    },
+    {
+      "Description": "Mouse"
+    },
+    {
+      "Description": "Webcam"
+    }
+  ],
+  "Products": [
+    {
+      "Description": "Notebook 330 I3-7020u 4gb 1tb Windows 10 15,6",
+      "Price": 1600,
+      "CategoryId": 1
+    },
+    {
+      "Description": "Notebook L340 I7-9750h 16gb 1tb 128gb Ssd",
+      "Price": 5250,
+      "CategoryId": 1
+    },
+    {
+      "Description": "Notebook C340 I3-8145u 4gb 128gb Ssd W",
+      "Price": 2000,
+      "CategoryId": 1
+    },
+    {
+      "Description": "Notebook Gamer 300 G3-572-70mg I7 Ssd 1",
+      "Price": 4850,
+      "CategoryId": 1
+    },
+    {
+      "Description": "Keyboard wireless",
+      "Price": 72,
+      "CategoryId": 2
+    },
+    {
+      "Description": "Mouse wireless",
+      "Price": 38,
+      "CategoryId": 3
+    },
+    {
+      "Description": "Webcam Streamers Studio",
+      "Price": 459,
+      "CategoryId": 4
+    },
+    {
+      "Description": "Webcam C270 Hd 720p",
+      "Price": 100,
+      "CategoryId": 4
+    }
+  ]
+}

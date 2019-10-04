@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace LojaTrabalhoFinal
+namespace Shop.Api
 {
     public class Program
     {

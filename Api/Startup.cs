@@ -1,21 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-
 using Shop.Api.Auth;
 using Shop.Api.Infra;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Shop.Api.Helpers;
 
-namespace LojaTrabalhoFinal
+namespace Shop.Api
 {
   public class Startup
   {
@@ -37,7 +31,7 @@ namespace LojaTrabalhoFinal
         IssuerSigningKey = JwtSecurityKey.Create()
       };
       services.AddDbContext<AppDbContext>(options =>
-          options.UseSqlite("DataSource=loja.db"));
+          options.UseSqlite("DataSource=shop.db"));
 
       services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
       .AddJwtBearer(
@@ -55,7 +49,7 @@ namespace LojaTrabalhoFinal
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       app.UseAuthentication();
-      // app.UseMiddleware(typeof(ExceptionHandling));
+      app.UseMiddleware(typeof(ExceptionHandling));
 
       app.UseStaticFiles();
 
@@ -65,9 +59,9 @@ namespace LojaTrabalhoFinal
 
       app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+              endpoints.MapControllerRoute(
+                  name: "default",
+                  pattern: "{controller=Home}/{action=Index}/{id?}");
             });
     }
   }
