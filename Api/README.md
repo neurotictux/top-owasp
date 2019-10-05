@@ -1,10 +1,11 @@
-## Exemplo de projeto Dotnet Core usando:
-- JWT
-- Claims
-- Middleware
-- Migrations 
-- Sqlite
+## Web application for testing and solutions for OWASP vulnerabilities
 
-### Rodar
+### Build docker image
+```docker
+docker build -t top-owasp:1.0 .
 ```
-dotnet restore && dotnet run
+
+### Run image
+```docker
+docker run -it -p 8080:5000 --name top-owasp top-owasp:1.0 /bin/bash  
+```
