@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-export { Table, ActionsButton } from '../styles'
 
 export const Container = styled.div`
     min-height: 100vh;
