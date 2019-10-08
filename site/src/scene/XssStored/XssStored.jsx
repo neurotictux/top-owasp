@@ -1,11 +1,15 @@
-import React from 'react'
-
-import { Container } from './styles'
+import React, { useState } from 'react'
 
 export function XssStored() {
+
+  const [comments, setComments] = useState([])
+  const [comment, setComment] = useState("")
+
+
+
   return (
-    <Container>
+    <>
       <h4>Xss Stored</h4>
-    </Container>
+    </>
   )
 }

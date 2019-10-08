@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 export const AppContainer = styled.div`
     background-color: #212121;
@@ -19,4 +19,5 @@ export const BaseContainer = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
     margin-left: 30px;
+    flex: 1;
 `

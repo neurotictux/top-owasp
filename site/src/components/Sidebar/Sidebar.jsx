@@ -10,7 +10,7 @@ export function Sidebar() {
             <MenuItem to={ROUTES.CSRF}>CSRF</MenuItem>
             <MenuItem to={ROUTES.FILE_INCLUSION}>File Inclusion</MenuItem>
             <MenuItem to={ROUTES.FILE_UPLOAD}>File Upload</MenuItem>
-            <MenuItem exact to={ROUTES.HOME}>Home</MenuItem>
+            <MenuItem to={ROUTES.HOME}>Home</MenuItem>
             <MenuItem to={ROUTES.LOGIN}>Login</MenuItem>
             <MenuItem to={ROUTES.SESSION_HIJAKING}>Session Hijaking</MenuItem>
             <MenuItem to={ROUTES.SQL_INJECTION}>Sql Injection</MenuItem>

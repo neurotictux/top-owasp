@@ -7,7 +7,7 @@ export const ROUTES = {
   HOME: '/',
   LOGIN: '/login',
   SESSION_HIJAKING: '/session-hijaking',
-  SQL_INJECTION: 'sql-injection',
+  SQL_INJECTION: '/sql-injection',
   XSS_REFLECTED: '/xss-reflected',
   XSS_STORED: '/xss-stored'
 }
